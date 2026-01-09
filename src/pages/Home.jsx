@@ -12,7 +12,7 @@ export default function Home({ bgToggle, setBgToggle }) {
     { name: 'Phone', cardsCount: 5 },
     { name: 'TV Appliances', cardsCount: 5 },
     { name: 'Toys', cardsCount: 5 },
-    { name: 'Grocery', cardsCount: 5 },
+    { name: 'Fashion', cardsCount: 5 },
     { name: 'Home Electronics', cardsCount: 5 },
     { name: 'Home Furniture', cardsCount: 5 }
   ];
@@ -24,7 +24,7 @@ export default function Home({ bgToggle, setBgToggle }) {
       name === "Phone" ? "phone" :
       name === "TV Appliances" ? "tvAppliances" :
       name === "Toys" ? "toys" :
-      name === "Grocery" ? "grocery" :
+      name === "Fashion" ? "Fashion" :
       name === "Home Electronics" ? "homeElectronics" :
       name === "Home Furniture" ? "homeFurniture" : null;
 

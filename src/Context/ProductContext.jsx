@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
-import MobilePhones from "../data/MobilePhones";
-import ToysProducts from "../data/toys";
-import HomeElectronics from "../data/HomeElectonics";
-import Grocery from "../data/grocerry";
+import ToysProducts from "../data/toys.js";
+import mobile from "../data/Productdata.js";
+import HomeElectronics from "../data/HomeElectonics.js";
+import Fashion from "../data/grocerry.js";
 import TvAppliances from "../data/TvAppliances";
 import HomeFurniture from "../data/furniture.js";
 
@@ -10,10 +10,10 @@ export const ProductContext = createContext(null);
 
 export const ProductProvider = ({ children }) => {
   const [products] = useState({
-    phone: MobilePhones,
+    phone: mobile,
     tvAppliances: TvAppliances,
     toys: ToysProducts,
-    grocery: Grocery,
+    Fashion: Fashion,
     homeElectronics: HomeElectronics,
     homeFurniture: HomeFurniture
   });
