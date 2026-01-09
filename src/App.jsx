@@ -17,20 +17,18 @@ import ContextProvider from "./Context/ContextProvider";
 import Orders from "./pages/Orders";
 
 function App() {
-  const [bgToggle, setBgToggle] = useState(false); // GLOBAL STATE
+  const [bgToggle, setBgToggle] = useState(false); 
 
   return (
     <ContextProvider>
       <BrowserRouter>
-
-        {/* Apply background to whole app including navbar */}
         <div
           style={{
             background: bgToggle
               ? "linear-gradient(135deg, #000 50%, #667eea 100%)"
               : "#ffffff",
             minHeight: "100vh",
-            transition: "0.4s ease-in-out"
+            transition: "0.4s ease-in-out",
           }}
         >
           <Header /> {/* navbar also affected */}
@@ -41,11 +39,11 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/wishlist" element={<Wishlist />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/product/:id" element={<ProductView />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
             <Route path="/orders" element={<Orders />} />
-            <Route path="/product/:id" element={<ProductView />} />
           </Routes>
 
           <Footer />

@@ -7,7 +7,6 @@ export default defineConfig({
       host: 'localhost',
       port: 5173,
     },
-    // ❗ Remove dev caching headers completely
   },
   plugins: [
     react({
